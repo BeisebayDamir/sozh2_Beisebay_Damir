@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Менің сандық визиткам — external</title>
+  <meta name="description" content="Бейсебай Дамирдің сандық визиткасы. СӨЖ №2: CSS қосудың үш әдісі (external нұсқасы).">
+  <meta name="keywords" content="визитка, портфолио, ақпараттық қауіпсіздік, CSS, ҚазҰТЗУ, студент">
+  <meta name="author" content="Бейсебай Дамир">
+  <meta name="theme-color" content="#0b3c49">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="kk_KZ">
+  <meta property="og:title" content="Менің сандық визиткам">
+  <meta property="og:description" content="Ақпараттық қауіпсіздік студентінің визиткасы: CSS қосудың үш әдісі.">
+  <meta property="og:image" content="https://beisebaydamir.github.io/sozh2_Beisebay_Damir/img/og-image.png">
+  <meta property="og:image:alt" content="Менің сандық визиткам — тақырыптық баннер">
+  <meta property="og:url" content="https://beisebaydamir.github.io/sozh2_Beisebay_Damir/external.html">
+  <!-- СӨЖ №2, external (style.css файлы): Стиль бөлек style.css файлында, <link> арқылы қосылған. -->
+  <!-- Сыртқы CSS файлы -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img class="avatar" src="img/avatar.png" alt="Қ.И. Сәтбаев атындағы ҚазҰТЗУ (Satbayev University) логотипі" width="160" height="160">
+    <h1>Бейсебай Дамир</h1>
+    <p>Ақпараттық қауіпсіздік мамандығы · Қ.И. Сәтбаев атындағы ҚазҰТЗУ · 2 курс</p>
+    <nav>
+      <a href="#about">Мен туралы</a>
+      <a href="#skills">Дағдылар</a>
+      <a href="#schedule">Кесте</a>
+      <a href="#links">Сілтемелер</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>Мен туралы</h2>
+      <p>Сәлем! Мен «6B06301 Ақпараттық қауіпсіздік» білім беру бағдарламасының 2 курс студентімін. Желі қауіпсіздігі мен веб-технологияларға қызығамын және қауіпсіз веб-қосымшалар жасауды үйреніп жатырмын.</p>
+      <p>Мақсатым — бітіргеннен кейін киберқауіпсіздік саласында маман болу.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Дағдыларым</h2>
+      <ul>
+        <li>HTML5 және семантикалық белгілеу</li>
+        <li>CSS негіздері</li>
+        <li>Git және GitHub</li>
+      </ul>
+      <h3>Үйреніп жатқан бағыттарым</h3>
+      <ol>
+        <li>JavaScript</li>
+        <li>C++</li>
+      </ol>
+    </section>
+
+    <section id="schedule">
+      <h2>Сабақ кестесі</h2>
+      <table>
+        <caption>Апталық сабақ кестесі (үлгі)</caption>
+        <thead>
+          <tr><th scope="col">Күн</th><th scope="col">Уақыты</th><th scope="col">Пән</th><th scope="col">Түрі</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Дүйсенбі</td><td>12:10–13:00</td><td>Модуль политических знаний</td><td>Практика</td></tr>
+          <tr><td>Сейсенбі</td><td>07:50–08:40</td><td>Основы экономики и предпринимательства</td><td>Лекция</td></tr>
+          <tr><td>Сәрсенбі</td><td>12:10–13:00</td><td>Введение в WEB</td><td>Практика</td></tr>
+          <tr><td>Бейсенбі</td><td>14:20–15:10</td><td>Физкультура</td><td>Практика</td></tr>
+          <tr><td>Жұма</td><td>12:00–13:30</td><td>Дискретті математика</td><td>Лекция</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="links">
+      <h2>Пайдалы сілтемелер</h2>
+      <p>Университеттің ресми сайты: <a href="https://satbayev.university/" target="_blank" rel="noopener noreferrer">Satbayev University</a></p>
+      <p>Веб-стандарттарды үйрену үшін: <a href="https://developer.mozilla.org/kk/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
+    </section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>© 2026 Бейсебай Дамир · CSE8271 · СӨЖ №2 (external)</p>
+  </footer>
+</body>
+</html>

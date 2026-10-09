@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Менің сандық визиткам — inline</title>
+  <meta name="description" content="Бейсебай Дамирдің сандық визиткасы. СӨЖ №2: CSS қосудың үш әдісі (inline нұсқасы).">
+  <meta name="keywords" content="визитка, портфолио, ақпараттық қауіпсіздік, CSS, ҚазҰТЗУ, студент">
+  <meta name="author" content="Бейсебай Дамир">
+  <meta name="theme-color" content="#0b3c49">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="kk_KZ">
+  <meta property="og:title" content="Менің сандық визиткам">
+  <meta property="og:description" content="Ақпараттық қауіпсіздік студентінің визиткасы: CSS қосудың үш әдісі.">
+  <meta property="og:image" content="https://beisebaydamir.github.io/sozh2_Beisebay_Damir/img/og-image.png">
+  <meta property="og:image:alt" content="Менің сандық визиткам — тақырыптық баннер">
+  <meta property="og:url" content="https://beisebaydamir.github.io/sozh2_Beisebay_Damir/inline.html">
+  <!-- СӨЖ №2, inline (style атрибуты): Стиль тек style="..." атрибуттары арқылы беріледі. <style> блогы да, .css файлы да жоқ. --></head>
+<body style="font-family: system-ui, 'Segoe UI', Arial, sans-serif; margin: 0; color: #1c2b30; line-height: 1.6; background: #f7fbfb;">
+  <header style="background: #0b3c49; color: #fff; text-align: center; padding: 2rem 1rem 1rem;">
+    <img style="border-radius: 50%; border: 4px solid #009688;" src="img/avatar.png" alt="Қ.И. Сәтбаев атындағы ҚазҰТЗУ (Satbayev University) логотипі" width="160" height="160">
+    <h1 style="margin: .75rem 0 .25rem;">Бейсебай Дамир</h1>
+    <p style="margin: 0 0 1rem;">Ақпараттық қауіпсіздік мамандығы · Қ.И. Сәтбаев атындағы ҚазҰТЗУ · 2 курс</p>
+    <nav style="margin-top: .5rem;">
+      <a style="color: #fff; text-decoration: none; margin: 0 .6rem; padding-bottom: 2px; border-bottom: 2px solid transparent;" href="#about">Мен туралы</a>
+      <a style="color: #fff; text-decoration: none; margin: 0 .6rem; padding-bottom: 2px; border-bottom: 2px solid transparent;" href="#skills">Дағдылар</a>
+      <a style="color: #fff; text-decoration: none; margin: 0 .6rem; padding-bottom: 2px; border-bottom: 2px solid transparent;" href="#schedule">Кесте</a>
+      <a style="color: #fff; text-decoration: none; margin: 0 .6rem; padding-bottom: 2px; border-bottom: 2px solid transparent;" href="#links">Сілтемелер</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 860px; margin: 0 auto; padding: 1rem 1.25rem;">
+    <section id="about">
+      <h2 style="color: #0b3c49; border-bottom: 3px solid #009688; padding-bottom: .25rem;">Мен туралы</h2>
+      <p>Сәлем! Мен «6B06301 Ақпараттық қауіпсіздік» білім беру бағдарламасының 2 курс студентімін. Желі қауіпсіздігі мен веб-технологияларға қызығамын және қауіпсіз веб-қосымшалар жасауды үйреніп жатырмын.</p>
+      <p>Мақсатым — бітіргеннен кейін киберқауіпсіздік саласында маман болу.</p>
+    </section>
+
+    <section id="skills">
+      <h2 style="color: #0b3c49; border-bottom: 3px solid #009688; padding-bottom: .25rem;">Дағдыларым</h2>
+      <ul>
+        <li style="margin: .2rem 0;">HTML5 және семантикалық белгілеу</li>
+        <li style="margin: .2rem 0;">CSS негіздері</li>
+        <li style="margin: .2rem 0;">Git және GitHub</li>
+      </ul>
+      <h3>Үйреніп жатқан бағыттарым</h3>
+      <ol>
+        <li style="margin: .2rem 0;">JavaScript</li>
+        <li style="margin: .2rem 0;">C++</li>
+      </ol>
+    </section>
+
+    <section id="schedule">
+      <h2 style="color: #0b3c49; border-bottom: 3px solid #009688; padding-bottom: .25rem;">Сабақ кестесі</h2>
+      <table style="border-collapse: collapse; width: 100%; background: #fff;">
+        <caption style="font-weight: 600; text-align: left; padding: .5rem 0;">Апталық сабақ кестесі (үлгі)</caption>
+        <thead>
+          <tr><th scope="col" style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left; background: #e6f4f2;">Күн</th><th scope="col" style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left; background: #e6f4f2;">Уақыты</th><th scope="col" style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left; background: #e6f4f2;">Пән</th><th scope="col" style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left; background: #e6f4f2;">Түрі</th></tr>
+        </thead>
+        <tbody>
+          <tr><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Дүйсенбі</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">12:10–13:00</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Модуль политических знаний</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Практика</td></tr>
+          <tr style="background: #f2f8f7;"><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Сейсенбі</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">07:50–08:40</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Основы экономики и предпринимательства</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Лекция</td></tr>
+          <tr><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Сәрсенбі</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">12:10–13:00</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Введение в WEB</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Практика</td></tr>
+          <tr style="background: #f2f8f7;"><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Бейсенбі</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">14:20–15:10</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Физкультура</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Практика</td></tr>
+          <tr><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Жұма</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">12:00–13:30</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Дискретті математика</td><td style="border: 1px solid #b9d3d0; padding: .5rem .75rem; text-align: left;">Лекция</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="links">
+      <h2 style="color: #0b3c49; border-bottom: 3px solid #009688; padding-bottom: .25rem;">Пайдалы сілтемелер</h2>
+      <p>Университеттің ресми сайты: <a style="color: #009688;" href="https://satbayev.university/" target="_blank" rel="noopener noreferrer">Satbayev University</a></p>
+      <p>Веб-стандарттарды үйрену үшін: <a style="color: #009688;" href="https://developer.mozilla.org/kk/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></p>
+    </section>
+  </main>
+
+  <footer style="max-width: 860px; margin: 0 auto; padding: 1rem 1.25rem; text-align: center; font-size: .9rem; color: #5b6b70;">
+    <p>© 2026 Бейсебай Дамир · CSE8271 · СӨЖ №2 (inline)</p>
+  </footer>
+</body>
+</html>

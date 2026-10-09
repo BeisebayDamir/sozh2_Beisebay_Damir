@@ -1,0 +1,6 @@
+/* exp-early.css — <style> блогынан БҰРЫН қосылады */
+.box { border: 2px solid #9aa; border-radius: 6px; padding: .75rem 1rem; margin: .75rem 0; background: #fff; font-weight: 700; }
+.t1 { color: red; }              /* external */
+.t2 { color: red; }              /* external (ерте) */
+.t4 { color: red !important; }   /* external + !important */
+#t5 { color: red; }              /* external, id селекторы */

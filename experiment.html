@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Приоритет эксперименті — CSS каскады</title>
+  <meta name="description" content="СӨЖ №2: бір элементке inline, internal және external әдістерімен қарама-қайшы түс беріп, қайсысы жеңетінін тексеру.">
+  <meta name="author" content="Бейсебай Дамир">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Тәртібі маңызды: 1) сыртқы (ерте) → 2) ішкі <style> → 3) сыртқы (кеш) -->
+  <link rel="stylesheet" href="exp-early.css">
+  <style>
+    body { font-family: system-ui, "Segoe UI", Arial, sans-serif; max-width: 820px; margin: 0 auto; padding: 1rem; background: #f7fbfb; color: #1c2b30; }
+    h1 { color: #0b3c49; }
+    small { display: block; font-weight: 400; color: #455; margin-top: .25rem; }
+    .t1 { color: blue; }          /* internal */
+    .t2 { color: blue; }          /* internal (кейін жазылған) */
+    .t3 { color: orange; }        /* internal (ерте) */
+    .t4 { color: blue; }          /* internal */
+    .t5 { color: blue; }          /* internal, класс селекторы */
+    .ok { color: #0a6; } .bad { color: #c00; }
+  </style>
+  <link rel="stylesheet" href="exp-late.css">
+</head>
+<body>
+  <h1>Приоритет эксперименті</h1>
+  <p>Әр қорапқа үш әдіспен түрлі түс берілген. Төменде нақты (computed) түс және күтілген нәтиже көрсетіледі.</p>
+
+  <div class="box t1" style="color: green;" data-winner="green" data-why="inline">
+    1. inline (жасыл) + internal (көк) + external (қызыл)
+    <small>Нәтиже: <span class="res"></span></small>
+  </div>
+  <div class="box t2" data-winner="blue" data-why="internal">
+    2. internal (көк, кейін) + external (қызыл, ерте)
+    <small>Нәтиже: <span class="res"></span></small>
+  </div>
+  <div class="box t3" data-winner="purple" data-why="external (кеш)">
+    3. internal (қызғылт сары, ерте) + external (күлгін, кеш)
+    <small>Нәтиже: <span class="res"></span></small>
+  </div>
+  <div class="box t4" style="color: green;" data-winner="red" data-why="external !important">
+    4. inline (жасыл) + internal (көк) + external !important (қызыл)
+    <small>Нәтиже: <span class="res"></span></small>
+  </div>
+  <div class="box t5" id="t5" data-winner="red" data-why="id селекторы (specificity)">
+    5. external #id (қызыл) + internal .класс (көк, кейін)
+    <small>Нәтиже: <span class="res"></span></small>
+  </div>
+
+  <script>
+    // Computed түсті оқып, атына айналдырады
+    var names = { "rgb(255, 0, 0)": "red", "rgb(0, 0, 255)": "blue", "rgb(0, 128, 0)": "green",
+                  "rgb(255, 165, 0)": "orange", "rgb(128, 0, 128)": "purple" };
+    document.querySelectorAll(".box").forEach(function (box) {
+      var c = getComputedStyle(box).color;
+      var name = names[c] || c;
+      var ok = name === box.dataset.winner;
+      box.querySelector(".res").innerHTML = "<b class='" + (ok ? "ok" : "bad") + "'>" + name + "</b> (" + c + ") — жеңген: " + box.dataset.why;
+    });
+  </script>
+</body>
+</html>
